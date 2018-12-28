@@ -1,0 +1,183 @@
+body  {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.container {
+   max-width:  1000px;
+   margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(3, 3, 88);
+    color: white;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    padding-left: 1%;
+}
+
+header > *, 
+.main > * {
+    /*border: 1px solid red;*/
+}
+.main {
+ display: flex
+}
+.col1{
+    width: 70%;
+    /*position: relative;
+    top: 0;*/
+    margin: 3%;
+    background: white;
+    transition: .5s;
+    height: inherit;
+    
+}
+.col2 {
+    width: 30%;
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 162, 255, 0.034);
+    transition: .5s;
+    text-align: center;
+    padding: 1%;
+}
+.logo {
+    width: 40%;
+}
+.menu, .banner {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu {
+    position: absolute;
+    left: 70%;
+    height: inherit;
+    top: 0;
+    background: rgb(1, 77, 78);
+    transition: .5s;
+   
+}
+.banner {
+    background-color: rgb(3, 92, 119);
+    transition: .5s; 
+    position: absolute;
+    left: 40%;
+    top:0;
+    height: inherit;
+}
+.text1, .text2, .text3 {
+    font-size: 20px;
+}
+.phrases {
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.text2, .text3 {
+display: none;
+}
+.hommer {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    transition: .5s;
+    left: 38%;
+    top: 9%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        left: 70%;
+        top: 50px;   
+    }
+    .col2 {
+        top: 50px;
+    }
+    .text2 {
+        display: block;
+        font-size: 17px;
+    }
+    .text1 {
+        display: none
+    }
+    .hommer {
+        width: 30%;
+        left: 37%;
+        content: url("https://revistadiners.com.co/wp-content/uploads/2016/03/homero_800x669.jpg");
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .menu {
+        left: 0;
+        top: 50px;
+        width: 70%;
+    }
+    .col1 {
+        margin-top: 50px;
+        font-size: 1rem;
+    }
+
+    .text2, .text1 {
+        display: none;
+    }
+    .text3 {
+        display: block;
+    }
+    .hommer {
+        top: 19%;
+        width: 30%;
+        left: 42%;
+        content: url("https://revistadiners.com.co/wp-content/uploads/2016/03/homero_800x669.jpg");
+    }
+}
+
+@media screen and (max-width: 468px) {
+    
+    .col1 {
+        margin-top: 100px;
+        width: auto;
+        text-align:center;
+        font-size: 1.3rem;
+    }
+    .menu, .banner{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner {
+        left: 0;
+        top: 100px;
+        
+    }
+    .main {
+        display: block;
+        
+    }
+    .col2 {
+        width: auto;
+        top:0;
+        
+        
+    }
+    .logo {
+       width: 100%;
+       text-align: center;
+       
+    }
+    .hommer {
+        top: 65%;
+        left:10%;
+        width: 60%;
+        content: url("https://cdn-static.denofgeek.com/sites/denofgeek/files/styles/main_wide/public/2017/11/homer_doh.jpg?itok=EkgaSNd8");
+    }
+}
+ 
